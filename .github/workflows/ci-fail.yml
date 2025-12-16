@@ -1,0 +1,16 @@
+name: CI Failure Test
+on: [push, workflow_dispatch]
+
+jobs:
+  build-and-crash:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run a script that fails
+        run: |
+          echo "Starting build..."
+          echo "Compiling..."
+          # This command returns exit code 1, causing a failure
+          ls -la /non-existent-folder
