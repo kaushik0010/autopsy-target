@@ -1,0 +1,5 @@
+echo "Starting build..."
+echo "Compiling..."
+# The previous command 'ls -la /non-existent-folder' was intentionally causing a failure and has been removed.
+# Replace this line with your actual build/compilation command(s) for the 'autopsy-target' repository.
+echo "Placeholder: Actual build process would run here."
