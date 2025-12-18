@@ -6,7 +6,7 @@ on:
     branches: [ main, develop ]
 
 jobs:
-  build-react-app:
+  build-backend-service:
     runs-on: ubuntu-24.04
 
     steps:
@@ -18,9 +18,9 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Simulate React Build
+      - name: Run Data Processor
         run: |
-          echo "Compiling React components..."
-          # This represents 'npm run build'
-          # We run node directly on the jsx file to trigger a syntax error
-          node src/Sidebar.jsx
+          echo "Running backend diagnostics..."
+          # This runs the standard JS file. 
+          # It fails now (Syntax Error), but will PASS when fixed.
+          node src/processor.js
