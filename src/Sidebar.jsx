@@ -6,8 +6,8 @@ const Sidebar = () => {
       <ul>
         <li>Home</li>
         <li>Settings</li>
-        {/* ERROR: The list item below is missing a closing tag */}
-        <li>Profile
+        {/* Fixed: The list item below was missing a closing tag */}
+        <li>Profile</li>
       </ul>
     </div>
   );
