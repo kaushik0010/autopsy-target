@@ -13,16 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Build and Compile Application
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run Application Script
         run: |
-          echo "Starting build..."
-          echo "Compiling..."
-          # The previous command 'ls -la /non-existent-folder' was causing a deliberate failure.
-          # Replace this section with your actual build commands.
-          # Example: 
-          # make clean all
-          # mvn clean install
-          # npm install
-          # cargo build
-          echo "Application built successfully!"
-          # Further steps like testing, packaging, or artifact uploading can follow here.
+          echo "Running the python app..."
+          # This will fail because src/app.py has a syntax error
+          python3 src/app.py
