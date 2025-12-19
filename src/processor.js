@@ -4,10 +4,9 @@ const processOrder = (orderId) => {
   
   const status = "active";
   
-  // ERROR: Missing closing parenthesis and brace below
-  if (status === "active" {
+  if (status === "active") {
     console.log("Order is active");
-  
+  }
   return true;
 };
 
